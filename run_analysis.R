@@ -1,4 +1,4 @@
-##' Download the dataset
+###' Download the dataset
 setwd("C:/Project Files/CURSOS/DataScience-Hopkins/getdata_projectfiles_UCI HAR Dataset (1)/UCI HAR Dataset/")
 library(plyr)
 library(data.table)
@@ -9,12 +9,12 @@ features <- read.table('./features.txt', col.names = c("n","functions"))
 activities <- read.table("./activity_labels.txt", col.names = c("code", "activity"))
 
 subject_Train = read.table('./train/subject_train.txt',header=FALSE)
-Train_x = read.table('./train/x_train.txt',header=FALSE)
-Train_y = read.table('./train/y_train.txt',header=FALSE)
+Train_x <- read.table('./train/x_train.txt',header=FALSE)
+Train_y <- read.table('./train/y_train.txt',header=FALSE)
 
 subject_Test = read.table('./test/subject_test.txt',header=FALSE)
-Test_x = read.table('./test/x_test.txt',header=FALSE)
-Test_y = read.table('./test/y_test.txt',header=FALSE)
+Test_x <- read.table('./test/x_test.txt',header=FALSE)
+Test_y <- read.table('./test/y_test.txt',header=FALSE)
 
 DataSet_x <- rbind(Train_x, Test_x)
 DataSet_y <- rbind(Train_y, Test_y)
@@ -68,16 +68,4 @@ DataMean<-DataMean[order(DataMean$Subject,DataMean$Activity),]
 
 # Write the output in a txt file.
 write.table(DataMean, file = "DataMean.txt",row.name=FALSE)
-
-
-
-
-
-
-
-
-
-
-
-
 
