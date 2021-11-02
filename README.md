@@ -1,4 +1,4 @@
-# tidydata
+# Tidydata
 ## Getting and Cleaning Data Course Project
 ### The work directory is defined and configured
 setwd("C:/Project Files/CURSOS/DataScience-Hopkins/getdata_projectfiles_UCI HAR Dataset (1)/UCI HAR Dataset/")
